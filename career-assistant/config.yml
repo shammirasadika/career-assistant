@@ -1,0 +1,31 @@
+project_name: "Career Assistant"
+
+retrieval:
+  top_k: 5
+  score_threshold: 0.1
+  chunk_size: 500
+  overlap: 50
+  index_path: "data/index.pkl"
+  corpus_path: "data/corpus.jsonl"
+
+ui:
+  share: false           # set to true if you want a public share URL
+  server_port: 7861      # avoid 7860 conflicts
+  server_name: "0.0.0.0" # bind to all interfaces (fixes localhost access issues)
+
+llm:
+  provider: openai       # preferred provider (Groq will be used automatically if all OpenAI keys fail)
+  model: gpt-4o-mini
+  temperature: 0.2
+  max_tokens: 800
+
+tooling:
+  salary_backend: csv
+  salary_country: au
+  salary_csv_path: "data/salary_tool_demo.csv"
+  
+ground_truth:
+  enabled: true
+  path: ground_truth.json
+
+

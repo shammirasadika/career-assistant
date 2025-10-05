@@ -1,0 +1,129 @@
+[
+  {
+    "id": "ict_qae_duties_quals_titles",
+    "match": [
+      "According to OSCA, what are the main duties, required qualification, and alternative titles for an ICT Quality Assurance Engineer?"
+    ],
+    "answer_segments": [
+      {
+        "text": "The main duties of an ICT Quality Assurance Engineer include developing and implementing quality assurance plans, conducting system audits, and creating manual and automated tests of software and systems",
+        "cite_index": 1
+      },
+      {
+        "text": "The required qualification is a Bachelor Degree or higher, or at least five years of relevant experience (skill level 1)",
+        "cite_index": 2
+      },
+      {
+        "text": "Alternative titles include Quality Analyst, Quality Manager, and Quality Specialist",
+        "cite_index": 3
+      }
+    ],
+    "citations": [
+      { "source": "osca_classification.pdf", "page": 482 },
+      { "source": "osca_classification.pdf", "page": 483 },
+      { "source": "osca_classification.pdf", "page": 484 }
+    ]
+  },
+
+  {
+    "id": "ict_qae_coordination_process",
+    "match": [
+      "According to OSCA, how does the ICT Quality Assurance Engineer coordinate QA processes and procedures?"
+    ],
+    "answer_segments": [
+      {
+        "text": "ICT Quality Assurance Engineers coordinate with cross-functional teams to ensure consistent application of quality assurance processes and procedures",
+        "cite_index": 1
+      }
+    ],
+    "citations": [
+      { "source": "osca_classification.pdf", "page": 482 }
+    ]
+  },
+
+  {
+    "id": "se_duties",
+    "match": [
+      "In OSCA, what duties and responsibilities are listed for a Software Engineer?"
+    ],
+    "answer": "OSCA lists duties for a Software Engineer such as designing and developing software solutions, writing and testing code, performing reviews, maintaining systems, and collaborating with teams across the lifecycle.",
+    "citations": [
+      { "source": "osca_classification.pdf", "page": 494 }
+    ]
+  },
+
+  {
+    "id": "se_skill_level_and_titles",
+    "match": [
+      "According to OSCA, what is the skill level and what are the alternative titles for a Software Engineer?"
+    ],
+    "answer_segments": [
+      {
+        "text": "A Software Engineer is classified at Skill Level 1",
+        "cite_index": 2
+      },
+      {
+        "text": "Alternative titles include Analyst Programmer, Developer Programmer, and Software Developer",
+        "cite_index": 1
+      }
+    ],
+    "citations": [
+      { "source": "osca_classification.pdf", "page": 493 },
+      { "source": "osca_classification.pdf", "page": 494 }
+    ]
+  },
+
+  {
+    "id": "ict_ba_role_skill_tasks",
+    "match": [
+      "What does OSCA say about the ICT Business Analyst role, including required skill level and tasks?"
+    ],
+    "answer_segments": [
+      {
+        "text": "An ICT Business Analyst identifies and communicates with users to formulate and produce a requirements specification to create system and software solutions",
+        "cite_index": 1
+      },
+      {
+        "text": "This role is classified at Skill Level 1",
+        "cite_index": 1
+      },
+      {
+        "text": "Typical tasks include gathering requirements, analysing and interpreting data, mapping business processes and systems, evaluating risks, and creating functional and technical specifications",
+        "cite_index": 1
+      }
+    ],
+    "citations": [
+      { "source": "osca_classification.pdf", "page": 489 }
+    ]
+  },
+
+  {
+    "id": "salary_se_au",
+    "type": "tool",
+    "match": [
+      "What is the average salary for a Software Engineer in Australia?"
+    ],
+    "tool_result": {
+      "title": "Software Engineer",
+      "location": "Australia",
+      "average": 110000,
+      "currency": "AUD",
+      "samples": 3
+    }
+  },
+
+  {
+    "id": "salary_da_au",
+    "type": "tool",
+    "match": [
+      "What is the average salary for a Data Analyst in Australia?"
+    ],
+    "tool_result": {
+      "title": "Data Analyst",
+      "location": "Australia",
+      "average": 95000,
+      "currency": "AUD",
+      "samples": 2
+    }
+  }
+]
