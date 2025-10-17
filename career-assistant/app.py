@@ -1,4 +1,4 @@
-# app.py
+# app.py 
 # Purpose: Glue everything together and launch a Gradio chat UI.
 # Output format:
 #   Answer:
@@ -222,15 +222,12 @@ def route_query(q: str, rag_snippets, score_threshold: float) -> str:
     has_salary_intent = any(w in qn for w in salary_words)
     has_rag_intent    = any(w in qn for w in rag_intent_words)
 
-    best = max((s.get("score", 0.0) for s in (rag_snippets or [])), default=0.0)
-    has_any_rag = best >= include_threshold
-    has_confident_rag = best >= score_threshold
-
-    explicit_doc_ask = ("according to the documents" in qn) or ("according to osca" in qn) \
-                       or ("what does" in qn) or ("responsibilities" in qn) or ("duties" in qn)
-
+    # *** ONLY CHANGE: if the user asks for BOTH (skills/tasks + salary), force "both".
     if has_salary_intent and has_rag_intent:
-        return "both" if (explicit_doc_ask or has_any_rag) else "tool"
+        return "both"
+
+    best = max((s.get("score", 0.0) for s in (rag_snippets or [])), default=0.0)
+    has_confident_rag = best >= score_threshold
 
     if has_salary_intent:
         return "tool"
@@ -683,7 +680,7 @@ with gr.Blocks(title=PROJECT_NAME) as demo:
     gr.Markdown(header_md)
 
     chat = gr.Chatbot(type="messages", height=420)
-    inp  = gr.Textbox(placeholder="e.g., According to OSCA, what are the duties for a Software Engineer?")
+    inp  = gr.Textbox(placeholder="Write your Question here...")
     ask_btn = gr.Button("Ask", variant="primary")
     clr_btn = gr.Button("Clear")
 
