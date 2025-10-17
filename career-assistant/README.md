@@ -125,7 +125,7 @@ In VS Code, open the integrated terminal:
 - Run the command below to install all required libraries:
   ```bash
    pip install -r requirements.txt
-   ```
+   ``` 
 
 ### Step 5: Run the Application
  ```bash
